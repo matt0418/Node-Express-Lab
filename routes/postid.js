@@ -47,7 +47,7 @@ router.put('/:id', async (req, res) => {
         if (post) {
             res.status(200).json(post)
         } else {
-            res.status(404).json({ message: "The ost with the specified ID does not exist" })
+            res.status(404).json({ message: "The post with the specified ID does not exist" })
         }
     } catch(error) {
         console.log(error)
