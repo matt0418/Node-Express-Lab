@@ -28,6 +28,8 @@ const StyledHeader = styled.h1`
   margin-top: 0%;
   padding-top: 3%;
   padding-bottom: 3%;
+  color: white;
+  font-weight: bold;
 `
 
 
