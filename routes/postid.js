@@ -9,7 +9,7 @@ router.get('/:id', async (req, res) => {
     try {
         const post = await Post.findById(id)
         console.log(post)
-        if (post.length > 0) {
+        if (post.length > 0) { //checking to see if there is a post or not
             return res.status(200).json(post)
         } else {
             res.status(404).json({ message: "The post with this ID was not found"})
@@ -25,7 +25,7 @@ router.delete('/:id', async (req, res) => {
     try {
         const count = await Post.remove(id)
         console.log(count)
-        if (count > 0) {
+        if (count > 0) { // 0 is falsey, can be rewritten as just if (count)
             res.status(200).json(count)
         } else {
             res.status(404).json({ message: "The post with this ID could not be found" })
@@ -39,7 +39,7 @@ router.delete('/:id', async (req, res) => {
 router.put('/:id', async (req, res) => {
     const id = req.params.id
     const {title, contents} = req.body
-    if (!title || !contents) {
+    if (!title || !contents) { //checking to see if there is title and contents in the put request
         return res.send({status: 400, message: "Please provide both title and contents in your update"})
     }
     try {

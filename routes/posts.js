@@ -18,7 +18,7 @@ router.get('/', async (req, res) => {
 
 router.post('/', async (req, res) => {
     const {title, contents} = req.body
-    if (!title || !contents) {
+    if (!title || !contents) { //checking if there is title and contents
         return (
             res.send({ status: 400, errorMessage: "Please provide title and contents"})
         )
