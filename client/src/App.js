@@ -43,7 +43,7 @@ class App extends Component {
 
   componentDidMount() {
     axios
-    .get('http://localhost:4000/api/posts')
+    .get('/api/posts')
     .then(res => {
       console.log(res)
       this.setState({
