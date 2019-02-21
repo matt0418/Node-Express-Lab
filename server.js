@@ -15,7 +15,7 @@ server.use('/api/posts', postIDRouter)
 
 server.get('/', (req, res) => {
     res.send(`
-      <h2>Blog Posts</h>
+      <h2>Blog Posts</h2>
     `);
   });
 
